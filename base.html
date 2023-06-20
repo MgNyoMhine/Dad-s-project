@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Dad's project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top">
+        <form action="" id="myForm" class="form">
+            <div class="left_side">
+                <div><p>ဂြိုလ်</p></div>
+                <div><p>ရာသီ</p></div>
+                <div><p>အံသာ</p></div>
+                <div><p>လိတ္တာ</p></div>
+                <div><p>1</p></div>
+                <div class="input">
+                    <input type="text" id="input1" name="input1_place" class="place">
+                </div>
+                <div class="input">
+                    <input type="text" id="input2" name="input1_degree" class="degree">
+                </div>
+                <div class="input">
+                    <input type="text" id="input3" name="input1_minute" class="minute">
+                </div>
+                <div>
+                    <p>2</p>
+                </div>
+                <div class="input">
+                    <input type="text" id="input4" name="input2_place" class="place">
+                </div>
+                <div class="input">
+                    <input type="text" id="input5" name="input2_degree" class="degree">
+                </div>
+                <div class="input">
+                    <input type="text" id="input6" name="input2_minute" class="minute">
+                </div>
+                <div>
+                    <p>3</p>
+                </div>
+                <div class="input">
+                    <input type="text" id="input7" name="input3_place" class="place">
+                </div>
+                <div class="input">
+                    <input type="text" id="input8" name="input3_degree" class="degree">
+                </div>
+                <div class="input">
+                    <input type="text" id="input9" name="input3_minute" class="minute">
+                </div>
+                <div>
+                    <p>4</p>
+                </div>
+                <div class="input">
+                    <input type="text" id="input10" name="input4_place" class="place">
+                </div>
+                <div class="input">
+                    <input type="text" id="input11" name="input4_degree" class="degree">
+                </div>
+                <div class="input">
+                    <input type="text" id="input12" name="input4_minute" class="minute">
+                </div>
+                <div>
+                    <p>5</p>
+                </div>
+                <div class="input">
+                    <input type="text" id="input13" name="input5_place" class="place">
+                </div>
+                <div class="input">
+                    <input type="text" id="input14" name="input5_degree" class="degree">
+                </div>
+                <div class="input">
+                    <input type="text" id="input15" name="input5_minute" class="minute">
+                </div>
+                <div>
+                    <p>6</p>
+                </div>
+                <div class="input">
+                    <input type="text" id="input16" name="input6_place" class="place">
+                </div>
+                <div class="input">
+                    <input type="text" id="input17" name="input6_degree" class="degree">
+                </div>
+                <div class="input">
+                    <input type="text" id="input18" name="input6_minute" class="minute">
+                </div>
+                <div>
+                    <p>7 / 0</p>
+                </div>
+                <div class="input">
+                    <input type="text" id="input19" name="input7_place" class="place">
+                </div>
+                <div class="input">
+                    <input type="text" id="input20" name="input7_degree" class="degree">
+                </div>
+                <div class="input">
+                    <input type="text" id="input21" name="input7_minute" class="minute">
+                </div>
+                <div>
+                    <p>8</p>
+                </div>
+                <div class="input">
+                    <input type="text" id="input22" name="input8_place" class="place">
+                </div>
+                <div class="input">
+                    <input type="text" id="input23" name="input8_degree" class="degree">
+                </div>
+                <div class="input">
+                    <input type="text" id="input24" name="input8_minute" class="minute">
+                </div>
+                    
+                <button type="submit" name="submit" id="chartbtn">Submit</button>
+            </div>
+        </form>
+        <div class="right_side">
+            <div class="hourly_values" id="hour1">
+                <p>1 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour2">
+                <p>2 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour3">
+                <p>3 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour4">
+                <p>4 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour5">
+                <p>5 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour6">
+                <p>6 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour7">
+                <p>7 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour8">
+                <p>8 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour9">
+                <p>9 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour10">
+                <p>10 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour11">
+                <p>11 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour12">
+                <p>12 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour13">
+                <p>13 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour14">
+                <p>14 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour15">
+                <p>15 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour16">
+                <p>16 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour17">
+                <p>17 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour18">
+                <p>18 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour19">
+                <p>19 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour20">
+                <p>20 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour21">
+                <p>21 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour22">
+                <p>22 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour23">
+                <p>23 = XXXX</p>
+            </div>
+            <div class="hourly_values" id="hour24">
+                <p>24 = XXXX</p>
+            </div>
+        </div>        
+    </div>
+    
+    <hr>
+
+    <div class="bottom">
+        <div class="day_hour">
+            <form action="" id="myForm2">
+                <div class="first_day">
+                    <div><p>ပထမနေ့ -</p></div>
+                    <div>
+                        <input type="text" id="first_day_hour" name="">
+                    </div>
+                    <div>
+                        <input type="text" id="first_day_minute" name="">
+                    </div>
+                </div>
+                <div class="second_day">
+                    <div><p>ဒုတိယနေ့ -</p></div>
+                    <div>
+                        <input type="text" id="second_day_hour" name="">
+                    </div>
+                    <div>
+                        <input type="text" id="second_day_minute" name="">
+                    </div>
+                </div>
+                <button type="submit" name="submit2">Submit</button>
+            </form>
+        </div>
+
+        <div class="nawin">
+            <div id="time">
+                <p>XX:XX</p>
+            </div>
+            <div id="average">
+                <p>XX.XX</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="distance">
+        <div>
+            <p>ဂြိုလ်</p>
+        </div>
+        <div>
+            <p>အမြင်ဂြိုလ်</p>
+        </div>
+        <div>
+            <p>ဒီဂရီ</p>
+        </div>
+        <div>
+            <p>လိတ္တာ</p>
+        </div>
+        <div>
+            <p>နာရီ</p>
+        </div>
+        <div>
+            <p>မိနစ်</p>
+        </div>
+          <div>
+            <p class="two_and_others item">2</p>
+          </div>
+          <div>
+            <p class="others_and_two item">-</p>
+          </div>
+          <div>
+            <p class="degree_two_others item">-</p>
+          </div>
+          <div>
+            <p class="Lather_two_others item">-</p>
+          </div>
+          <div>
+            <p class="hour_two_others item">-</p>
+          </div>
+          <div>
+            <p class="minute_two_others item">-</p>
+          </div>
+          <div>
+            <p class="two_and_others item">2</p>
+          </div>
+          <div>
+            <p class="others_and_two item">-</p>
+          </div>
+          <div>
+            <p class="degree_two_others item">-</p>
+          </div>
+          <div>
+            <p class="Lather_two_others item">-</p>
+          </div>
+          <div>
+            <p class="hour_two_others item">-</p>
+          </div>
+          <div>
+            <p class="minute_two_others item">-</p>
+          </div>
+          <div>
+            <p class="two_and_others item">2</p>
+          </div>
+          <div>
+            <p class="others_and_two item">-</p>
+          </div>
+          <div>
+            <p class="degree_two_others item">-</p>
+          </div>
+          <div>
+            <p class="Lather_two_others item">-</p>
+          </div>
+          <div>
+            <p class="hour_two_others item">-</p>
+          </div>
+          <div>
+            <p class="minute_two_others item">-</p>
+          </div>
+          <div>
+            <p class="two_and_others item">2</p>
+          </div>
+          <div>
+            <p class="others_and_two item">-</p>
+          </div>
+          <div>
+            <p class="degree_two_others item">-</p>
+          </div>
+          <div>
+            <p class="Lather_two_others item">-</p>
+          </div>
+          <div>
+            <p class="hour_two_others item">-</p>
+          </div>
+          <div>
+            <p class="minute_two_others item">-</p>
+          </div>
+          <div>
+            <p class="two_and_others item">2</p>
+          </div>
+          <div>
+            <p class="others_and_two item">-</p>
+          </div>
+          <div>
+            <p class="degree_two_others item">-</p>
+          </div>
+          <div>
+            <p class="Lather_two_others item">-</p>
+          </div>
+          <div>
+            <p class="hour_two_others item">-</p>
+          </div>
+          <div>
+            <p class="minute_two_others item">-</p>
+          </div>
+          <div>
+            <p class="two_and_others item">2</p>
+          </div>
+          <div>
+            <p class="others_and_two item">-</p>
+          </div>
+          <div>
+            <p class="degree_two_others item">-</p>
+          </div>
+          <div>
+            <p class="Lather_two_others item">-</p>
+          </div>
+          <div>
+            <p class="hour_two_others item">-</p>
+          </div>
+          <div>
+            <p class="minute_two_others item">-</p>
+          </div>
+          <div>
+            <p class="two_and_others item">2</p>
+          </div>
+          <div>
+            <p class="others_and_two item">-</p>
+          </div>
+          <div>
+            <p class="degree_two_others item">-</p>
+          </div>
+          <div>
+            <p class="Lather_two_others item">-</p>
+          </div>
+          <div>
+            <p class="hour_two_others item">-</p>
+          </div>
+          <div>
+            <p class="minute_two_others item">-</p>
+          </div>  
+    </div>
+
+    <hr>
+
+    <div class="close">
+        <div>
+            <p>ဂြိုလ် (၂)</p>
+        </div>
+        <div>
+            <p>ဂြိုလ်ပူး</p>
+        </div>
+        <div>
+            <p>လိတ္တာ</p>
+        </div>
+        <div>
+            <p>နာရီ</p>
+        </div>
+        <div>
+            <p>မိနစ်</p>
+        </div>
+        <div class="line1">
+            <p class="close_two item">2</p>
+          </div>
+          <div class="line1">
+            <p class="close_other item">-</p>
+          </div>
+          <div class="line1">
+            <p class="close_lather item">-</p>
+          </div>
+          <div class="line1">
+            <p class="close_hour item">-</p>
+          </div>
+          <div class="line1">
+            <p class="close_minute item">-</p>
+          </div>
+          <div class="line2">
+            <p class="close_two item">2</p>
+          </div>
+          <div class="line2">
+            <p class="close_other item">-</p>
+          </div>
+          <div class="line2">
+            <p class="close_lather item">-</p>
+          </div>
+          <div class="line2">
+            <p class="close_hour item">-</p>
+          </div>
+          <div class="line2">
+            <p class="close_minute item">-</p>
+          </div>
+          <div class="line3">
+            <p class="close_two item">2</p>
+          </div>
+          <div class="line3">
+            <p class="close_other item">-</p>
+          </div>
+          <div class="line3">
+            <p class="close_lather item">-</p>
+          </div>
+          <div class="line3">
+            <p class="close_hour item">-</p>
+          </div>
+          <div class="line3">
+            <p class="close_minute item">-</p>
+          </div>
+          <div class="line4">
+            <p class="close_two item">2</p>
+          </div>
+          <div class="line4">
+            <p class="close_other item">-</p>
+          </div>
+          <div class="line4">
+            <p class="close_lather item">-</p>
+          </div>
+          <div class="line4">
+            <p class="close_hour item">-</p>
+          </div>
+          <div class="line4">
+            <p class="close_minute item">-</p>
+          </div>
+          <div class="line5">
+            <p class="close_two item">2</p>
+          </div>
+          <div class="line5">
+            <p class="close_other item">-</p>
+          </div>
+          <div class="line5">
+            <p class="close_lather item">-</p>
+          </div>
+          <div class="line5">
+            <p class="close_hour item">-</p>
+          </div>
+          <div class="line5">
+            <p class="close_minute item">-</p>
+          </div>
+          <div class="line6">
+            <p class="close_two item">2</p>
+          </div>
+          <div class="line6">
+            <p class="close_other item">-</p>
+          </div>
+          <div class="line6">
+            <p class="close_lather item">-</p>
+          </div>
+          <div class="line6">
+            <p class="close_hour item">-</p>
+          </div>
+          <div class="line6">
+            <p class="close_minute item">-</p>
+          </div>
+          <div class="line7">
+            <p class="close_two item">2</p>
+          </div>
+          <div class="line7">
+            <p class="close_other item">-</p>
+          </div>
+          <div class="line7">
+            <p class="close_lather item">-</p>
+          </div>
+          <div class="line7">
+            <p class="close_hour item">-</p>
+          </div>
+          <div class="line7">
+            <p class="close_minute item">-</p>
+          </div>
+          <div class="line8">
+            <p class="close_two item">2</p>
+          </div>
+          <div class="line8">
+            <p class="close_other item">-</p>
+          </div>
+          <div class="line8">
+            <p class="close_lather item">-</p>
+          </div>
+          <div class="line8">
+            <p class="close_hour item">-</p>
+          </div>
+          <div class="line8">
+            <p class="close_minute item">-</p>
+          </div>          
+    </div>
+
+    <hr>
+
+    <div class="other_close">
+        <div>
+            <p>ဂြိုလ်</p>
+        </div>
+        <div>
+            <p>ဂြိုလ်</p>
+        </div>
+        <div>
+            <p>ဒီဂရီ</p>
+        </div>
+        <div>
+            <p class="other_close_num1 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num2 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_value item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num1 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num2 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_value item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num1 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num2 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_value item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num1 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num2 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_value item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num1 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num2 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_value item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num1 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num2 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_value item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num1 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num2 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_value item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num1 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num2 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_value item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num1 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num2 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_value item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num1 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_num2 item">-</p>
+          </div>
+          <div>
+            <p class="other_close_value item">-</p>
+          </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

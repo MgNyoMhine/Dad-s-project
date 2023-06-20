@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+hr {
+    margin: 50px 0;
+}
+
+button{
+    height: 50px;
+    width: 100px;
+    margin: 20px;
+    color: white;
+    font-size: large;
+    background-color: blue;
+    border: 1px solid black;
+}
+
+button:visited {
+    background-color:aquamarine;
+    color: white;
+}
+
+button:active {
+    background-color: white;
+    color: black;
+}
+
+.top {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.form {
+    flex: 70%;
+}
+
+.left_side {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 5px;
+    padding: 10x;
+    margin: 5px;
+}
+
+.left_side p {
+    padding: 15px 0;
+}
+
+.left_side > div {
+    border: 1px solid black;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.input input{
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.right_side {
+    flex: 30%;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+.right_side div{
+    line-height: 27px;
+}
+
+.bottom {
+    margin-top: 10px;
+    display: flex;
+}
+
+.line2 {
+    display: none;
+}
+
+.day_hour {
+    padding: 10px;
+    flex: 60%;
+}
+
+.first_day {
+    display: flex;
+}
+
+.first_day p {
+    margin-right: 10px;
+}
+
+.first_day input {
+    width: 100px;
+    line-height: 30px;
+    border: 1px solid black;
+    margin-left: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.second_day {
+    display: flex;
+}
+
+.second_day p {
+    margin-right: 5px;
+}
+
+.second_day input {
+    width: 100px;
+    line-height: 30px;
+    border: 1px solid black;
+    margin-left: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.nawin {
+    flex: 40%;
+    margin-top: 10px;
+}
+
+.nawin div {
+    width: fit-content;
+    line-height: 30px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    padding: 0 3px;
+}
+
+.distance {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 5px;
+    padding: 10x;
+    margin: 5px;
+}
+
+.distance div {
+    border: 1px solid black;
+    text-align: center;
+    line-height: 40px;
+}
+
+.close {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 5px;
+    padding: 10x;
+    margin: 5px;
+}
+
+.close div {
+    border: 1px solid black;
+    text-align: center;
+    line-height: 40px;
+}
+
+.other_close {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5px;
+    padding: 10x;
+    margin: 5px;
+}
+
+.other_close div {
+    border: 1px solid black;
+    text-align: center;
+    line-height: 40px;
+}
+
+input:focus {
+    border: 3px solid cyan ;
+}
