@@ -3,6 +3,10 @@ var minute_values = [];
 var place_values = [];
 var final_places = [];
 
+var nawin = 0;
+var nawin_hour = 0;
+var nawin_minute = 0;
+
 var hourly_values = [];
 var hourly_values_holder = [];
 var checking_values = [];
@@ -41,6 +45,9 @@ var second_day_minute = 0;
 var other_close_num1s = [];
 var other_close_num2s = [];
 var other_close_degs = [];
+
+var close_other_div = [];
+var close_other_p = [];
 
 
 function storeInputValues() {
@@ -122,6 +129,10 @@ function storeHourMinuteValues() {
   close_check();
   call_difference();
   updateItemStyles();
+
+  if (checking_values.some(num => num > 1700)){
+    findClosestValue(checking_values, 1800);
+  }
 };
 
 
@@ -163,9 +174,9 @@ function toCheck(first_date_hour, first_date_minute, second_date_hour, second_da
         increment = (second_date - first_date) / 24;
     }
 
-    var nawin = 12000 / increment;
-    var nawin_hour = Math.floor(nawin / 60);
-    var nawin_minute = nawin % 60;
+    nawin = 12000 / increment;
+    nawin_hour = Math.floor(nawin / 60);
+    nawin_minute = nawin % 60;
 
     document.getElementById("average").innerHTML = increment.toFixed(2);
     document.getElementById("time").innerHTML = `${nawin_hour}:${nawin_minute.toFixed()}`;
@@ -185,8 +196,6 @@ function toCheck(first_date_hour, first_date_minute, second_date_hour, second_da
       first_date_to_check = (first_date_to_check + increment / 60) % 1800;
       checking_values.push(first_date_to_check.toFixed(2))
     }
-
-    console.log(checking_values)
 }
 
 function findTwo(numberFromTwo, placeOfTwo) {
@@ -255,7 +264,9 @@ function close_check(){
   close_other_hour_holder = document.getElementsByClassName("close_hour");
   close_other_minute_holder = document.getElementsByClassName("close_minute");
   close_other_two = document.getElementsByClassName("close_two");
-  close_two_others = document.getElementsByClassName("close_two_others")
+  close_two_others = document.getElementsByClassName("close_two_others");
+  close_other_div = document.querySelectorAll('.other_close div');
+  close_other_p = document.querySelectorAll('.other_close p');
 
   for (i = 0; i < 8; i++) {
 
@@ -336,3 +347,82 @@ function updateItemStyles() {
     }
   }
 }
+
+function findClosestValue(array, target) {
+  let closestValue = null;
+  let minDifference = Infinity;
+  var greaterthan = document.getElementsByClassName("greaterthan");
+  var lessthan = document.getElementsByClassName("lessthan");
+  var remove1800 = document.querySelectorAll('.nawin1800 div'); 
+  var remove1800p = document.querySelectorAll('.nawin1800 div p');
+  var setplace = document.querySelectorAll('.setplace');
+  var regionless = document.querySelectorAll('.regionless');
+  var regiongreater = document.querySelectorAll('.regiongreater');
+
+  for (let value of array) {
+    let difference = Math.abs(value - target);
+    if (difference < minDifference) {
+      minDifference = difference;
+      closestValue = value;
+    }
+  }
+
+  let wrapAroundDifference =
+    Math.abs(array[array.length - 1] - target) +
+    Math.abs(array[0] - target);
+  if (wrapAroundDifference < minDifference) {
+    closestValue = array[0];
+  }
+
+  console.log(closestValue)
+  console.log(Math.floor(closestValue/60))
+  console.log(closestValue%60)
+
+  for (i = 0; i < checking_values.length; i++){
+    if (closestValue == checking_values[i]){
+      var num1_toCalculate = i + 2;
+      var num2_toCalculate = i + 2;
+      setplace[0].innerHTML = `${Math.floor(num1_toCalculate/60)} နာရီ ${Math.round(num1_toCalculate%60,2)} မိနစ်`;
+      setplace[1].innerHTML = `${Math.floor(num2_toCalculate/60)} နာရီ ${Math.round(num2_toCalculate%60,2)} မိနစ်`;
+    }
+  }
+
+
+  
+  var nawin_toCalculate = nawin_hour * 60 + (Math.floor(nawin_minute, 2));
+  console.log("------")
+  console.log(Math.floor(num1_toCalculate/60))
+  console.log(Math.round(num1_toCalculate%60, 2))
+  console.log("------")
+  console.log(Math.floor(nawin_toCalculate))
+
+  for (i = 0; i < 9; i++){
+    num1_toCalculate += nawin_toCalculate;
+    num2_toCalculate -= nawin_toCalculate;
+
+    if (Math.floor(num1_toCalculate/60) < 24) {
+      greaterthan[i].innerHTML = `${Math.floor(num1_toCalculate/60)} နာရီ ${Math.round(num1_toCalculate%60,2)} မိနစ်`
+      regiongreater[i].innerHTML = i + 1;
+    }
+
+    if (Math.floor(num2_toCalculate/60) > 1) {
+      lessthan[i].innerHTML = `${Math.floor(num2_toCalculate/60)} နာရီ ${Math.round(num2_toCalculate%60,2)} မိနစ်`
+      regionless[i].innerHTML = 9 - i;
+    }
+  }
+
+  for (i = 0; i < remove1800.length; i++) {
+    if (remove1800p[i].innerHTML === "-") {
+      remove1800[i].style.display = "hidden";
+    }
+  }
+
+  for (i = 0; i < close_other_div.length; i++) {
+    if (close_other_p[i].innerHTML === "-") {
+      close_other_div[i].style.display = "hidden";
+    }
+  }
+
+}
+
+
