@@ -181,7 +181,7 @@ input:focus {
     border: 3px solid cyan ;
 }
 
-.nawin_oe {
+.nawin1800 {
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 5px;
@@ -189,7 +189,7 @@ input:focus {
     margin: 5px;
 }
 
-.nawin_oe div{
+.nawin1800 div{
     border: 1px solid black;
     text-align: center;
     line-height: 40px;
