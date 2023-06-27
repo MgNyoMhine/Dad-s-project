@@ -177,10 +177,6 @@ button:active {
     line-height: 40px;
 }
 
-input:focus {
-    border: 3px solid cyan ;
-}
-
 .nawin1800 {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -193,4 +189,8 @@ input:focus {
     border: 1px solid black;
     text-align: center;
     line-height: 40px;
+}
+
+input:focus {
+    border: 3px solid cyan;
 }
