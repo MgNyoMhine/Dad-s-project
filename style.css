@@ -177,7 +177,11 @@ button:active {
     line-height: 40px;
 }
 
-.niwtdnw {
+input:focus {
+    border: 3px solid cyan ;
+}
+
+.nawin1800 {
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 5px;
@@ -185,12 +189,8 @@ button:active {
     margin: 5px;
 }
 
-.niwtdnw div{
+.nawin1800 div{
     border: 1px solid black;
     text-align: center;
     line-height: 40px;
-}
-
-input:focus {
-    border: 3px solid cyan;
 }
