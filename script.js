@@ -422,7 +422,6 @@ function findClosestValue(array, target) {
       close_other_div[i].style.display = "hidden";
     }
   }
-
 }
 
 
