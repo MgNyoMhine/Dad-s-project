@@ -177,7 +177,7 @@ button:active {
     line-height: 40px;
 }
 
-.nawin1800 {
+.niwtdnw {
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 5px;
@@ -185,7 +185,7 @@ button:active {
     margin: 5px;
 }
 
-.nawin1800 div{
+.niwtdnw div{
     border: 1px solid black;
     text-align: center;
     line-height: 40px;
