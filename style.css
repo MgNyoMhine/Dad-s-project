@@ -96,11 +96,16 @@ button:active {
     margin-right: 10px;
 }
 
+.first_day p:nth-child(1) {
+    margin-right: 9px;
+}
+
 .first_day input {
     width: 100px;
     line-height: 30px;
     border: 1px solid black;
     margin-left: 5px;
+    margin-bottom: 8px;
     font-size: 18px;
     text-align: center;
 }
@@ -181,15 +186,15 @@ input:focus {
     border: 3px solid cyan ;
 }
 
-.nawin1800 {
+.nawinregion {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     gap: 5px;
     padding: 10x;
     margin: 5px;
 }
 
-.nawin1800 div{
+.nawinregion div{
     border: 1px solid black;
     text-align: center;
     line-height: 40px;
