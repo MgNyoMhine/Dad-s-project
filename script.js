@@ -129,10 +129,7 @@ function storeHourMinuteValues() {
   close_check();
   call_difference();
   updateItemStyles();
-
-  if (checking_values.some(num => num > 1700)){
-    findClosestValue(checking_values, 1800);
-  }
+  region();
 };
 
 
@@ -194,7 +191,7 @@ function toCheck(first_date_hour, first_date_minute, second_date_hour, second_da
 
     for (i = 0; i < 1440; i++) {
       first_date_to_check = (first_date_to_check + increment / 60) % 1800;
-      checking_values.push(first_date_to_check.toFixed(2))
+      checking_values.push(first_date_to_check)
     }
 }
 
@@ -348,80 +345,29 @@ function updateItemStyles() {
   }
 }
 
-function findClosestValue(array, target) {
-  let closestValue = null;
-  let minDifference = Infinity;
-  var greaterthan = document.getElementsByClassName("greaterthan");
-  var lessthan = document.getElementsByClassName("lessthan");
-  var remove1800 = document.querySelectorAll('.nawin1800 div'); 
-  var remove1800p = document.querySelectorAll('.nawin1800 div p');
-  var setplace = document.querySelectorAll('.setplace');
-  var regionless = document.querySelectorAll('.regionless');
-  var regiongreater = document.querySelectorAll('.regiongreater');
+function region() {
+  let hundreds = [200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800];
+  let values = [];
+  let hourmin = [];
+  let closest = Infinity;
+  console.log(checking_values);
 
-  for (let value of array) {
-    let difference = Math.abs(value - target);
-    if (difference < minDifference) {
-      minDifference = difference;
-      closestValue = value;
-    }
-  }
+  var regionhourmin = document.querySelectorAll(".regionhourmin")
 
-  let wrapAroundDifference =
-    Math.abs(array[array.length - 1] - target) +
-    Math.abs(array[0] - target);
-  if (wrapAroundDifference < minDifference) {
-    closestValue = array[0];
-  }
-
-  console.log(closestValue)
-  console.log(Math.floor(closestValue/60))
-  console.log(closestValue%60)
-
-  for (i = 0; i < checking_values.length; i++){
-    if (closestValue == checking_values[i]){
-      var num1_toCalculate = i + 2;
-      var num2_toCalculate = i + 2;
-      setplace[0].innerHTML = `${Math.floor(num1_toCalculate/60)} နာရီ ${Math.round(num1_toCalculate%60,2)} မိနစ်`;
-      setplace[1].innerHTML = `${Math.floor(num2_toCalculate/60)} နာရီ ${Math.round(num2_toCalculate%60,2)} မိနစ်`;
-    }
-  }
-
-
-  
-  var nawin_toCalculate = nawin_hour * 60 + (Math.floor(nawin_minute, 2));
-  console.log("------")
-  console.log(Math.floor(num1_toCalculate/60))
-  console.log(Math.round(num1_toCalculate%60, 2))
-  console.log("------")
-  console.log(Math.floor(nawin_toCalculate))
-
-  for (i = 0; i < 9; i++){
-    num1_toCalculate += nawin_toCalculate;
-    num2_toCalculate -= nawin_toCalculate;
-
-    if (Math.floor(num1_toCalculate/60) < 24) {
-      greaterthan[i].innerHTML = `${Math.floor(num1_toCalculate/60)} နာရီ ${Math.round(num1_toCalculate%60,2)} မိနစ်`
-      regiongreater[i].innerHTML = i + 1;
+  for (i = 0; i < hundreds.length; i++){
+    closest = Infinity;
+    for (j = 0; j < checking_values.length; j++) {
+      values[i] = Math.abs(checking_values[j] - hundreds[i]);
+      if (closest > values[i]) {
+        closest = values[i];
+        hourmin[i] = j;
+      }
     }
 
-    if (Math.floor(num2_toCalculate/60) > 1) {
-      lessthan[i].innerHTML = `${Math.floor(num2_toCalculate/60)} နာရီ ${Math.round(num2_toCalculate%60,2)} မိနစ်`
-      regionless[i].innerHTML = 9 - i;
-    }
-  }
-
-  for (i = 0; i < remove1800.length; i++) {
-    if (remove1800p[i].innerHTML === "-") {
-      remove1800[i].style.display = "hidden";
-    }
-  }
-
-  for (i = 0; i < close_other_div.length; i++) {
-    if (close_other_p[i].innerHTML === "-") {
-      close_other_div[i].style.display = "hidden";
+    console.log(`${i} is ${hourmin}`)
+    
+    if (hourmin[i] > 1 && hourmin[i] < 1339) {
+      regionhourmin[i].innerHTML = `${Math.floor(hourmin[i] / 60)} နာရီ ${Math.round(hourmin[i] % 60, 2)} မိနစ်`
     }
   }
 }
-
-
