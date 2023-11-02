@@ -194,8 +194,12 @@ input:focus {
     margin: 5px;
 }
 
-.nawinregion div{
+.nawinregion div {
     border: 1px solid black;
     text-align: center;
     line-height: 40px;
+}
+
+.la {
+    font-size: 18px;
 }
