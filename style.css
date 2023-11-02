@@ -38,7 +38,7 @@ button:active {
 
 .left_side {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     gap: 5px;
     padding: 10x;
     margin: 5px;
