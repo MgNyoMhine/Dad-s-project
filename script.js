@@ -398,44 +398,44 @@ function la() {
   
   for (i = 0; i < 7; i++) {
     allminutes[i] = degree_values[i] * 60 + minute_values[i];
-    if (allminutes[i] > 0 && allminutes[i] < 200) {
+    if (allminutes[i] >= 0 && allminutes[i] <= 200) {
       la_nm[i].innerHTML = add_values[i] % 12;
-    } else if (allminutes[i] > 200 && allminutes[i] < 400) {
+    } else if (allminutes[i] >= 200 && allminutes[i] <= 400) {
       la_nm[i].innerHTML = (add_values[i] + 1) % 12;
-    } else if (allminutes[i] > 400 && allminutes[i] < 600) {
+    } else if (allminutes[i] >= 400 && allminutes[i] <= 600) {
       la_nm[i].innerHTML = (add_values[i] + 2) % 12;
-    } else if (allminutes[i] > 600 && allminutes[i] < 800) {
+    } else if (allminutes[i] >= 600 && allminutes[i] <= 800) {
       la_nm[i].innerHTML = (add_values[i] + 3) % 12;
-    } else if (allminutes[i] > 800 && allminutes[i] < 1000) {
+    } else if (allminutes[i] >= 800 && allminutes[i] <= 1000) {
       la_nm[i].innerHTML = (add_values[i] + 4) % 12;
-    } else if (allminutes[i] > 1000 && allminutes[i] < 1200) {
+    } else if (allminutes[i] >= 1000 && allminutes[i] <= 1200) {
       la_nm[i].innerHTML = (add_values[i] + 5) % 12;
-    } else if (allminutes[i] > 1200 && allminutes[i] < 1400) {
+    } else if (allminutes[i] >= 1200 && allminutes[i] <= 1400) {
       la_nm[i].innerHTML = (add_values[i] + 6) % 12;
-    } else if (allminutes[i] > 1400 && allminutes[i] < 1600) {
+    } else if (allminutes[i] >= 1400 && allminutes[i] <= 1600) {
       la_nm[i].innerHTML = (add_values[i] + 7) % 12;
-    } else if (allminutes[i] > 1600 && allminutes[i] < 1800) {
+    } else if (allminutes[i] >= 1600 && allminutes[i] <= 1800) {
       la_nm[i].innerHTML = (add_values[i] + 8) % 12;
     } 
   }
 
-  if (present7 > 0 && present7 < 200) {
+  if (present7 >= 0 && present7 <= 200) {
     la_nm[i].innerHTML = add_values[i] % 12;
-  } else if (present7 > 200 && present7 < 400) {
+  } else if (present7 >= 200 && present7 <= 400) {
     la_nm[i].innerHTML = (add_values[i] + 1) % 12;
-  } else if (present7 > 400 && present7 < 600) {
+  } else if (present7 >= 400 && present7 <= 600) {
     la_nm[i].innerHTML = (add_values[i] + 2) % 12;
-  } else if (present7 > 600 && present7 < 800) {
+  } else if (present7 >= 600 && present7 <= 800) {
     la_nm[i].innerHTML = (add_values[i] + 3) % 12;
-  } else if (present7 > 800 && present7 < 1000) {
+  } else if (present7 >= 800 && present7 <= 1000) {
     la_nm[i].innerHTML = (add_values[i] + 4) % 12;
-  } else if (present7 > 1000 && present7 < 1200) {
+  } else if (present7 >= 1000 && present7 <= 1200) {
     la_nm[i].innerHTML = (add_values[i] + 5) % 12;
-  } else if (present7 > 1200 && present7 < 1400) {
+  } else if (present7 >= 1200 && present7 <= 1400) {
     la_nm[i].innerHTML = (add_values[i] + 6) % 12;
-  } else if (present7 > 1400 && present7 < 1600) {
+  } else if (present7 >= 1400 && present7 <= 1600) {
     la_nm[i].innerHTML = (add_values[i] + 7) % 12;
-  } else if (present7 > 1600 && present7 < 1800) {
+  } else if (present7 >= 1600 && present7 <= 1800) {
     la_nm[i].innerHTML = (add_values[i] + 8) % 12;
   } 
 }
